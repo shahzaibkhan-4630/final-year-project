@@ -14,7 +14,7 @@ const InterviewQuestions = () => {
   const [questions, setQuestions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const questionsPerPage = 5; // Number of questions per page
+  const questionsPerPage = 10; // Number of questions per page
   const router = useRouter();
 
   // Load questions from sessionStorage on component mount

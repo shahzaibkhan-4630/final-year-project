@@ -9,6 +9,7 @@ import {
   ClipboardList,
   MessageCircle,
   Upload,
+  History,
 } from "lucide-react";
 
 export const navLinks = [
@@ -48,9 +49,9 @@ export const companyNavItems = [
 export const ApplicantNavItems = [
   { icon: LayoutDashboard, label: "Dashboard", href: "/applicant/dashboard" },
   {
-    icon: MessageCircle,
-    label: "Company Messages",
-    href: "/applicant/company-responses",
+    icon: History,
+    label: "Interview History",
+    href: "/applicant/interview-history",
   },
   {
     icon: Upload,

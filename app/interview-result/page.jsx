@@ -17,7 +17,7 @@ const InterviewResult = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [results, setResults] = useState(null);
   const [loading, setLoading] = useState(true);
-  const questionsPerPage = 3;
+  const questionsPerPage = 10;
   const router = useRouter();
 
   // Load results from sessionStorage on component mount
