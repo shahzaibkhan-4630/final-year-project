@@ -533,7 +533,6 @@ const Dashboard = () => {
                     {/* Salary and Experience */}
                     <div className="flex flex-wrap items-center gap-4 text-sm text-gray-300">
                       <div className="flex items-center gap-2">
-                        <DollarSign className="h-4 w-4 text-gray-400" />
                         <span>{application.salary}</span>
                       </div>
                       {application.experienceDetail && (
@@ -571,7 +570,7 @@ const Dashboard = () => {
 
                     {/* Action Buttons */}
                     <div className="flex flex-wrap gap-3 pt-2">
-                      <Button
+                      {/* <Button
                         variant="outline"
                         size="sm"
                         onClick={() => handleMessageCompany(application)}
@@ -579,7 +578,7 @@ const Dashboard = () => {
                       >
                         <MessageSquare className="h-4 w-4 mr-2" />
                         Message Company
-                      </Button>
+                      </Button> */}
                       <Button
                         variant="outline"
                         size="sm"
