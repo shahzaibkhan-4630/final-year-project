@@ -58,6 +58,11 @@ export const ApplicantNavItems = [
     label: "Upload Resume",
     href: "/applicant/upload-resume",
   },
+  {
+    icon: MessageCircle,
+    label: "Company Messages",
+    href: "/applicant/company-messages",
+  },
 ];
 
 export const features = [
