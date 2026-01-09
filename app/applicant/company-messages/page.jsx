@@ -674,8 +674,8 @@ import {
   ArrowLeft,
 } from "lucide-react";
 import axios from "axios";
-import CompanySidebarLayout from "@/layout/CompanySidebarLayout";
 import ApplicantSidebarLayout from "@/layout/ApplicantSidebarLayout";
+import Link from "next/link";
 
 const BACKEND_URL =
   process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8000";
@@ -1024,7 +1024,7 @@ export default function ChatApp() {
 
   return (
     <ApplicantSidebarLayout>
-      <div className="flex h-[95vh] bg-[#1a1a1a] text-white overflow-hidden">
+      <div className="flex h-[calc(100vh-100px)] mt-16 sm:mt-0 sm:h-[95vh] bg-[#1a1a1a] text-white overflow-hidden">
         {loading ? (
           <div className="flex-1 flex items-center justify-center">
             <div className="text-center">
@@ -1053,16 +1053,18 @@ export default function ChatApp() {
             <div
               className={`
               ${showSidebar ? "flex" : "hidden lg:flex"}
-              w-full lg:w-[380px] border-r border-gray-800 flex-col
+              w-full lg:w-[380px] border-r border-gray-800 flex-col h-full
             `}
             >
               {/* Header */}
               <div className="p-4 sm:p-6 border-b border-gray-800">
                 <div className="flex items-center justify-between mb-4">
+                  <Link href="/company/dashboard">
+                    <button className="w-10 h-10 rounded-full border border-gray-700 hover:bg-gray-800 flex items-center justify-center transition-colors">
+                      <ArrowLeft size={20} />
+                    </button>
+                  </Link>
                   <h1 className="text-xl sm:text-2xl font-semibold">Chats</h1>
-                  <button className="w-10 h-10 rounded-full border border-gray-700 hover:bg-gray-800 flex items-center justify-center transition-colors">
-                    <Plus size={20} />
-                  </button>
                 </div>
 
                 {/* Search */}
@@ -1142,7 +1144,7 @@ export default function ChatApp() {
             <div
               className={`
               ${!showSidebar || selectedChat ? "flex" : "hidden lg:flex"}
-              flex-1 flex-col min-w-0
+              flex-1 flex-col min-w-0 h-full
             `}
             >
               {selectedChat ? (
@@ -1357,3 +1359,4 @@ export default function ChatApp() {
     </ApplicantSidebarLayout>
   );
 }
+
