@@ -675,6 +675,7 @@ import {
 } from "lucide-react";
 import axios from "axios";
 import CompanySidebarLayout from "@/layout/CompanySidebarLayout";
+import ApplicantSidebarLayout from "@/layout/ApplicantSidebarLayout";
 
 const BACKEND_URL =
   process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8000";
@@ -1022,7 +1023,7 @@ export default function ChatApp() {
   };
 
   return (
-    <CompanySidebarLayout>
+    <ApplicantSidebarLayout>
       <div className="flex h-[95vh] bg-[#1a1a1a] text-white overflow-hidden">
         {loading ? (
           <div className="flex-1 flex items-center justify-center">
@@ -1353,6 +1354,6 @@ export default function ChatApp() {
           </>
         )}
       </div>
-    </CompanySidebarLayout>
+    </ApplicantSidebarLayout>
   );
 }
