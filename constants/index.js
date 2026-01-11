@@ -38,7 +38,7 @@ export const companyNavItems = [
     label: "Jobs Applications",
     href: "/company/jobs-applications",
   },
-  { icon: ClipboardList, label: "All Jobs", href: "/company/all-jobs" },
+  // { icon: ClipboardList, label: "All Jobs", href: "/company/all-jobs" },
   {
     icon: MessageCircle,
     label: "Applicant Messages",
